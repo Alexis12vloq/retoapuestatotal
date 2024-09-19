@@ -24,6 +24,7 @@ export class CustomersController {
 
   @Get("/health")
   healthCheck() {
+    console.log("aqui");
     return "OK";
   }
 }
