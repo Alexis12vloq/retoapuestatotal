@@ -2,7 +2,8 @@
     "name": "customers",
     "version": "1.0.0",
     "scripts": {
-        "start:dev": "nest start --watch"
+        "start:dev": "nest start --watch",
+        "start": "nest start"
     },
     "dependencies": {
         "@nestjs/common": "^10.4.3",
