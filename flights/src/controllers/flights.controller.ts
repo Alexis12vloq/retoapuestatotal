@@ -21,7 +21,7 @@ export class FlightsController {
     return this.flightsService.findAll();
   }
 
-  @Get("/health")
+  @Get("/")
   healthCheck() {
     return "OK";
   }

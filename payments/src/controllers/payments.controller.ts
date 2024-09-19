@@ -21,7 +21,7 @@ export class PaymentsController {
     return this.paymentsService.findAll();
   }
 
-  @Get("/health")
+  @Get("/")
   healthCheck() {
     return "OK";
   }
