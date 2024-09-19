@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "start:dev": "nest start --watch",
-        "start": "PORT=3001 nest start"
+        "start": "nest start --host 0.0.0.0"
     },
     "dependencies": {
         "@nestjs/common": "^10.4.3",
