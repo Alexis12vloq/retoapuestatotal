@@ -11,6 +11,14 @@ export class CustomersController {
     return this.customersService.create(createCustomerDto);
   }
 
+  @Get("/health")
+  checkHealth() {
+    return {
+      status: "OK",
+      timestamp: new Date(),
+    };
+  }
+
   @Get(":id")
   findOne(@Param("id") id: string) {
     console.log(id);
@@ -20,11 +28,5 @@ export class CustomersController {
   @Get()
   findAll() {
     return this.customersService.findAll();
-  }
-
-  @Get("/health")
-  healthCheck() {
-    console.log("aqui");
-    return "OK";
   }
 }

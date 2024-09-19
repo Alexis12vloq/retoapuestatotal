@@ -11,6 +11,14 @@ export class FlightsController {
     return this.flightsService.create(createFlightDto);
   }
 
+  @Get("/health")
+  checkHealth() {
+    return {
+      status: "OK",
+      timestamp: new Date(),
+    };
+  }
+
   @Get(":id")
   findOne(@Param("id") id: string) {
     return this.flightsService.findOne(+id);
@@ -19,10 +27,5 @@ export class FlightsController {
   @Get()
   findAll() {
     return this.flightsService.findAll();
-  }
-
-  @Get("/health")
-  healthCheck() {
-    return "OK";
   }
 }

@@ -11,6 +11,14 @@ export class PaymentsController {
     return this.paymentsService.create(createPaymentDto);
   }
 
+  @Get("/health")
+  checkHealth() {
+    return {
+      status: "OK",
+      timestamp: new Date(),
+    };
+  }
+
   @Get(":id")
   findOne(@Param("id") id: string) {
     return this.paymentsService.findOne(+id);
@@ -19,10 +27,5 @@ export class PaymentsController {
   @Get()
   findAll() {
     return this.paymentsService.findAll();
-  }
-
-  @Get("/health")
-  healthCheck() {
-    return "OK";
   }
 }

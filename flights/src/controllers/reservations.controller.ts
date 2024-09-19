@@ -16,6 +16,14 @@ export class ReservationsController {
     );
   }
 
+  @Get("/health")
+  checkHealth() {
+    return {
+      status: "OK",
+      timestamp: new Date(),
+    };
+  }
+
   @Get(":id")
   findReservation(@Param("id") id: string) {
     return this.flightReservationsService.findOne(+id);
@@ -24,10 +32,5 @@ export class ReservationsController {
   @Get()
   findAllReservations() {
     return this.flightReservationsService.findAll();
-  }
-
-  @Get("/health")
-  healthCheck() {
-    return "OK";
   }
 }
