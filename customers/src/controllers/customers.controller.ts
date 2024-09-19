@@ -22,7 +22,7 @@ export class CustomersController {
     return this.customersService.findAll();
   }
 
-  @Get("/")
+  @Get("/health")
   healthCheck() {
     return "OK";
   }
