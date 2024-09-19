@@ -21,4 +21,9 @@ export class CustomersController {
   findAll() {
     return this.customersService.findAll();
   }
+
+  @Get("/health")
+  healthCheck() {
+    return "OK";
+  }
 }

@@ -20,4 +20,9 @@ export class FlightsController {
   findAll() {
     return this.flightsService.findAll();
   }
+
+  @Get("/health")
+  healthCheck() {
+    return "OK";
+  }
 }

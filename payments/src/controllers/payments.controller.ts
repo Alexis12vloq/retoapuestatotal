@@ -20,4 +20,9 @@ export class PaymentsController {
   findAll() {
     return this.paymentsService.findAll();
   }
+
+  @Get("/health")
+  healthCheck() {
+    return "OK";
+  }
 }

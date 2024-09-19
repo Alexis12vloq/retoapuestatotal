@@ -25,4 +25,9 @@ export class ReservationsController {
   findAllReservations() {
     return this.flightReservationsService.findAll();
   }
+
+  @Get("/health")
+  healthCheck() {
+    return "OK";
+  }
 }
