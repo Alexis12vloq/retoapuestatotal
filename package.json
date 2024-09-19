@@ -12,6 +12,7 @@
         "start:flights": "cd flights && ts-node -r tsconfig-paths/register src/main.ts",
         "start:payments": "cd payments && ts-node -r tsconfig-paths/register src/main.ts",
         "start:frontend": "cd frontend && npm run dev",
+        "start": "npm run start:all",
         "start:all": "npm run install:all && concurrently \"npm run start:customers\" \"npm run start:flights\" \"npm run start:payments\" \"npm run start:frontend\""
     },
     "workspaces": [
