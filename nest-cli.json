@@ -1,0 +1,43 @@
+
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "monorepo": true,
+  "projects": {
+    "customers": {
+      "type": "application",
+      "root": "customers",
+      "sourceRoot": "customers/src",
+      "entryFile": "main",
+      "compilerOptions": {
+        "tsConfigPath": "customers/tsconfig.app.json"
+      }
+    },
+    "flights": {
+      "type": "application",
+      "root": "flights",
+      "sourceRoot": "flights/src",
+      "entryFile": "main",
+      "compilerOptions": {
+        "tsConfigPath": "flights/tsconfig.app.json"
+      }
+    },
+    "payments": {
+      "type": "application",
+      "root": "payments",
+      "sourceRoot": "payments/src",
+      "entryFile": "main",
+      "compilerOptions": {
+        "tsConfigPath": "payments/tsconfig.app.json"
+      }
+    },
+    "frontend": {
+      "type": "application",
+      "root": "frontend",
+      "sourceRoot": "frontend/src",
+      "compilerOptions": {
+        "tsConfigPath": "frontend/tsconfig.app.json"
+      }
+    }
+  }
+}
