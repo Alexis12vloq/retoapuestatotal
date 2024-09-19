@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Monorepo for NestJS microservices and Next.js frontend",
     "scripts": {
+        "prestart:all": "npm install -g concurrently",
         "install:customers": "cd customers && npm install",
         "install:flights": "cd flights && npm install",
         "install:payments": "cd payments && npm install",
