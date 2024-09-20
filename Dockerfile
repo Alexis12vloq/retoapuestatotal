@@ -1,22 +1,23 @@
+# Usa la imagen base de Node.js
 FROM node:20-alpine
 
-# Crear directorio de la aplicación
+# Establecer el directorio de trabajo en el contenedor
 WORKDIR /app
 
-# Copiar archivos package.json y package-lock.json
+# Copiar los archivos de package.json y package-lock.json
 COPY package*.json ./
 
-# Instalar las dependencias de producción
+# Instalar las dependencias
 RUN npm install
 
-# Copiar el resto del código de la aplicación
+# Copiar el resto de los archivos de la aplicación
 COPY . .
 
-# Exponer los puertos
+# Exponer los puertos necesarios
 EXPOSE 3000
 EXPOSE 3001
 EXPOSE 3002
 EXPOSE 3003
 
-# Iniciar la aplicación
+# Comando para iniciar la aplicación
 CMD ["npm", "run", "start:all"]
