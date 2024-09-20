@@ -1,0 +1,25 @@
+version: '3'
+services:
+  customers:
+    build: .
+    command: npm run start:customers
+    ports:
+      - "3001:3001"
+  
+  flights:
+    build: .
+    command: npm run start:flights
+    ports:
+      - "3002:3002"
+
+  payments:
+    build: .
+    command: npm run start:payments
+    ports:
+      - "3003:3003"
+
+  frontend:
+    build: .
+    command: npm run start:frontend
+    ports:
+      - "3000:3000"
