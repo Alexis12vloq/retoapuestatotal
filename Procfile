@@ -1,1 +1,1 @@
-web: concurrently "npm run start:all" "nginx -g 'daemon off;'"
+web: npm run start:all && nginx -g 'daemon off;'
